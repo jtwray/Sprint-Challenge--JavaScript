@@ -30,7 +30,8 @@ Edit this document to include your answers after each question. Make sure to lea
 
 Describe the biggest difference between .forEach & .map.
 
-	foreach allows a callback to mutate the original array. map does not allow the originial array to be mutated it will create a new array and in this new array store the results of passing the original array elements through a callback
+	foreach allows a callback to mutate the original array. map does not allow the originial array to be mutated,
+     it will create a new array and in this new array store the results of passing the original array elements through a callback
 
 What is the difference between a function and a method?
 
@@ -38,9 +39,10 @@ What is the difference between a function and a method?
 
 What is closure?
 
-	closure is the scope within a functions curly brackets; it defines what items see and have access to each other.
-items of the same scope see each other and can reach up and out of their lexical scope to define variables but not deeper down into further enclosed scopes. 
-closure allows Javascript to emulate private methods seen in Java where the private methods can ony be called by other methods of the same class. 
+	closure is the scope within a functions curly brackets;
+     it defines what items see and have access to each other.
+     items of the same scope see each other and can reach up and out of their lexical scope to define variables but not deeper down into further enclosed scopes.
+     closure allows Javascript to emulate private methods seen in Java where the private methods can ony be called by other methods of the same class. 
 
 Describe the four rules of the 'this' keyword.
 

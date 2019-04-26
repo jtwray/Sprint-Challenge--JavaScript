@@ -28,15 +28,41 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
-1. Describe the biggest difference between `.forEach` & `.map`.
+Describe the biggest difference between .forEach & .map.
 
-2. What is the difference between a function and a method?
+	foreach allows a callback to mutate the original array. map does not allow the originial array to be mutated it will create a new array and in this new array store the results of passing the original array elements through a callback
 
-3. What is closure?
+What is the difference between a function and a method?
 
-4. Describe the four rules of the 'this' keyword.
+	a method is a function that happens to be the value of an object's key:value pair or a method is a property of an object. 
 
-5. Why do we need super() in an extended class?
+What is closure?
+
+	closure is the scope within a functions curly brackets; it defines what items see and have access to each other.
+items of the same scope see each other and can reach up and out of their lexical scope to define variables but not deeper down into further enclosed scopes. 
+closure allows Javascript to emulate private methods seen in Java where the private methods can ony be called by other methods of the same class. 
+
+Describe the four rules of the 'this' keyword.
+
+	1implicit binding: the most common form of binding this to object.  Use implicit binding of the keyword 'this' with objects, properties, keys, and methods.
+	 whenever a function is invoked with a preceding 'dot' '.' the object before that dot is 'this. this.property ,this.method, this.key
+
+	2explicit binding:use explicit binding with functions. explicit this binding is used with the methods '.call' , '.bind' , & '.apply'. 
+	explicit binding takes the value of this and redefines it , directing it explicitly at another object that the original implicit binding.
+
+
+	3global binding: Global binding is the default binding of this. when you dont define this otherwise and call it the global or window binding occurs. 
+	Global biding of this will log the whole of the javascript language in object form.
+
+	4new binding: New binding of this occurs when creating a new object by invoking a constructor function. 
+	the specific instance of the object created and returned by the constructor function is the value of this. this assigns to the new object.
+
+Why do we need super() in an extended class?
+
+	it replaces the object.create(this,class) syntax
+    super gives a child class access to all of the methods defined in the parent class
+    without causing the memory burdens of defining methods within an object as in psuedoclassical inheritance without prototypes.
+    the methods live on the prototype in class inheritance using class, extends, and super
 
 ## Project Set up
 

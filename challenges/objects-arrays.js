@@ -199,19 +199,22 @@ const lowerCase = zooAnimals.map((value) => {
     return value.animal_name.toLowerCase();
 });
 
-// allCaps = runners.map((value) => {
-//     return value.first_name.toUpperCase();
-// });
+
 
 
 console.log(lowerCase);
 
 /* Request 3: .filter() 
 
-The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
+The zoos are concerned about animals with a lower population count. Find out which animals have a population less than 5.
 
 */
-const largerPopulation = [];
+const largerPopulation = zooAnimals.filter((value) => {
+    if (value.population < 5) {
+        return value.animal_name;
+    }
+});
+
 console.log(largerPopulation);
 
 /* Request 4: .reduce() 
@@ -219,7 +222,13 @@ console.log(largerPopulation);
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
 
 */
-const populationTotal = 0;
+const populationTotal = zooAnimals.reduce((accumulator, value) => {
+    return accumulator + value.population;
+
+}, 0);
+
+
+
 console.log(populationTotal);
 
 /* 

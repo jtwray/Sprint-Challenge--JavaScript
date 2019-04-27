@@ -132,23 +132,22 @@ console.log(contactInfo);
 const uni = [];
 
 for (let i = 0; i < universities.length; i++) {
-    let mappedObj = {};
-    mappedObj[i] = universities[i].includes("uni");
-    uni.push(mappedObj);
-    mappedObj = {};
+    if (universities[i].includes("Uni")) {
+        uni.push(universities[i]);
+    }
 }
-
-let sample = "The human body is a remarkably adaptable machine.";
-
-console.log(sample.includes("yea"));
-
-console.log('-----------------------------');
-
-for (let i = 0; i < universities.length; i++) {
-    const uni = universities[i].includes("Uni");
-}
-
 console.log(uni);
+// let sample = "The human body is a remarkably adaptable machine.";
+
+// console.log(sample.includes("mar"));
+
+// console.log('-----------------------------');
+
+// for (let i = 0; i < universities.length; i++) {
+//     const uni = universities[i].includes("Uni");
+// }
+
+
 //     console.log(universities[i].includes("Uni"));
 
 
@@ -158,7 +157,7 @@ console.log(uni);
 
 // Given this zoo data from around the United States, follow the instructions below.  Use the specific array methods in the requests below to solve the problems.
 
-zooAnimals = [
+const zooAnimals = [
     { animal_name: 'Jackal, asiatic', population: 5, scientific_name: 'Canis aureus', state: 'Kentucky' },
     { animal_name: 'Screamer, southern', population: 1, scientific_name: 'Chauna torquata', state: 'Alabama' },
     { animal_name: 'White spoonbill', population: 8, scientific_name: 'Platalea leucordia', state: 'Georgia' },
@@ -182,9 +181,10 @@ const animalNames = [];
 
 zooAnimals.forEach((value) => {
 
-    console.log(animalNames.push(`Name:${value.animal_name}, Scientific:${value.scientific_name}`));
+    animalNames.push(`Name:${value.animal_name}, Scientific:${value.scientific_name}`);
 
 });
+
 console.log(animalNames);
 
 

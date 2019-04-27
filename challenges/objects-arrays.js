@@ -118,7 +118,6 @@ The resulting contact information should have a space between the first name and
 Name email@example.com
 Log the result of your new array. */
 
-
 const contactInfo = [];
 for (let i = 0; i < graduates.length; i++) {
     let mappedObj = {};
@@ -127,13 +126,33 @@ for (let i = 0; i < graduates.length; i++) {
     mappedObj = {};
 }
 
-
-
 console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
+
+for (let i = 0; i < universities.length; i++) {
+    let mappedObj = {};
+    mappedObj[i] = universities[i].includes("uni");
+    uni.push(mappedObj);
+    mappedObj = {};
+}
+
+let sample = "The human body is a remarkably adaptable machine.";
+
+console.log(sample.includes("yea"));
+
+console.log('-----------------------------');
+
+for (let i = 0; i < universities.length; i++) {
+    const uni = universities[i].includes("Uni");
+}
+
 console.log(uni);
+//     console.log(universities[i].includes("Uni"));
+
+
+
 
 // ==== ADVANCED Array Methods ====
 
@@ -149,21 +168,26 @@ zooAnimals = [
     { animal_name: 'Common melba finch', population: 5, scientific_name: 'Pytilia melba', state: 'Pennsylvania' },
     { animal_name: 'Pampa gray fox', population: 10, scientific_name: 'Pseudalopex gymnocercus', state: 'Connecticut' },
     { animal_name: 'Hawk-eagle, crowned', population: 10, scientific_name: 'Spizaetus coronatus', state: 'Florida' },
-    {
-        animal_name: 'Australian pelican',
-        population: 5,
-        scientific_name: 'Pelecanus conspicillatus',
-        state: 'West Virginia'
-    }
+    { animal_name: 'Australian pelican', population: 5, scientific_name: 'Pelecanus conspicillatus', state: 'West Virginia' },
 ];
 
-/* Request 1: .forEach()
-
-The zoo wants to display both the scientific name and the animal name in front of the habitats.  Return an array with only the animal and scientific names in it.  The individual values in the array should look like this "Name: Jackal, asiatic, Scientific: Canis aureus."
+/* Request 1: .forEach()*/
+/*
+The zoo wants to display both the scientific name and the animal name in front of the habitats. 
+Return an array with only the animal and scientific names in it.
+The individual values in the array should look like this "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
 const animalNames = [];
+
+zooAnimals.forEach((value) => {
+
+    console.log(animalNames.push(`Name:${value.animal_name}, Scientific:${value.scientific_name}`));
+
+});
 console.log(animalNames);
+
+
 
 /* Request 2: .map()    
 
@@ -171,7 +195,15 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 */
 
-const lowerCase = [];
+const lowerCase = zooAnimals.map((value) => {
+    return value.animal_name.toLowerCase();
+});
+
+// allCaps = runners.map((value) => {
+//     return value.first_name.toUpperCase();
+// });
+
+
 console.log(lowerCase);
 
 /* Request 3: .filter() 
